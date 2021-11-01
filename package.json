@@ -1,0 +1,38 @@
+{
+    "private": true,
+    "scripts": {
+        "dev": "mkdir empty & robocopy /mir empty public\\images & rmdir empty & npm run development",
+        "dev-server": "cd public & rm -rf images & cd .. & npm run development",
+        "development": "cross-env NODE_ENV=development node_modules/webpack/bin/webpack.js --progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "watch": "npm run development -- --watch",
+        "watch-poll": "npm run watch -- --watch-poll",
+        "hot": "cross-env NODE_ENV=development node_modules/webpack-dev-server/bin/webpack-dev-server.js --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
+        "prod": "npm run production",
+        "production": "cross-env NODE_ENV=production node_modules/webpack/bin/webpack.js --no-progress --hide-modules --config=node_modules/laravel-mix/setup/webpack.config.js"
+    },
+    "devDependencies": {
+        "axios": "^0.21.1",
+        "cross-env": "^6",
+        "laravel-mix": "^5.0.1",
+        "lodash": "^4.17.21",
+        "resolve-url-loader": "^2.3.1",
+        "sass": "^1.15.2",
+        "sass-loader": "^8.0.0",
+        "vue-template-compiler": "^2.6.11"
+    },
+    "dependencies": {
+        "@fancyapps/fancybox": "^3.5.7",
+        "@fortawesome/fontawesome-free": "^5.12.0",
+        "bootstrap": "^4.4.1",
+        "cross-env": "^6",
+        "feather-icons": "^4.25.0",
+        "flickity": "^2.2.1",
+        "highlightjs": "^9.16.2",
+        "jarallax": "^1.12.0",
+        "jquery": "^3.6.0",
+        "list.js": "^1.5.0",
+        "popper.js": "^1.11.0",
+        "simplebar": "^5.1.0",
+        "smooth-scroll": "^16.1.0"
+    }
+}
